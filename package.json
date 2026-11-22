@@ -1,6 +1,7 @@
 {
   "name": "fakescript-docs",
   "version": "3.0.0",
+  "license": "WTFPL",
   "private": true,
   "type": "module",
   "scripts": {

@@ -65,3 +65,7 @@ fakescript-docs/
 ├── .gitignore
 └── package.json
 ```
+
+## License
+
+Licensed under the [WTFPL](./LICENSE).
