@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: process.env.VITEPRESS_BASE || '/',
   title: 'FakeScript',
   description: 'A strictly zero-symbol, Ahead-of-Time compiled programming language.',
   cleanUrls: true,
