@@ -1,0 +1,10 @@
+services:
+  fakescript-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fakescript-docs:latest
+    container_name: fakescript-docs
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
