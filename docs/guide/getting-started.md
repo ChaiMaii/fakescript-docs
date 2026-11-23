@@ -2,11 +2,36 @@
 
 ## Prerequisites
 
-- **Go 1.22+** installed and available on your `PATH` (for building `fksc` and compiling `.fks` binaries). No C compiler or external dependencies are needed.
+- **Go 1.22+** installed and available on your `PATH` (used to build `fksc`, `fkspm`, and native `.fks` binaries). No C compiler or external dependencies are needed.
 
-## 1. Build the Compiler
+## 1. Quick Install (`fksc` + `fkspm`)
 
-From the FakeScript repository root:
+Install both the **FakeScript compiler (`fksc`)** and the **package manager (`fkspm`)** using the visual installer:
+
+::: code-group
+
+```powershell [Windows (PowerShell)]
+irm https://raw.githubusercontent.com/ChaiMaii/fakescript/main/install.ps1 | iex
+```
+
+```bash [Linux / macOS]
+curl -fsSL https://raw.githubusercontent.com/ChaiMaii/fakescript/main/install.sh | sh
+```
+
+:::
+
+The visual installer downloads and compiles `fksc` and `fkspm`, places them in your user bin directory, and adds them to your `PATH`.
+
+Verify both tools:
+
+```powershell
+fksc version
+fkspm version
+```
+
+### Build Manually from Source
+
+If you prefer building directly from a cloned repository:
 
 ```powershell
 go build -o fksc.exe fksc.go
@@ -16,13 +41,6 @@ On macOS or Linux:
 
 ```bash
 go build -o fksc fksc.go
-```
-
-Verify the installation:
-
-```powershell
-.\fksc.exe version
-# fksc v3.0.0 (windows/amd64)
 ```
 
 ## 2. Write Your First Program
